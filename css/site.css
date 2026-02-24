@@ -10,7 +10,7 @@ body {
 .hero-pilates {
   min-height: calc(100vh - var(--navbar-height));
   background:
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    linear-gradient(rgba(255, 255, 255, 0.85), rgba(0, 0, 0, 0.6)),
     url("../images/hero.webp") center/cover no-repeat;
   image-rendering: -webkit-optimize-contrast;
 }
@@ -37,6 +37,20 @@ body {
   height: 2px;
   background-color: var(--cor-secundaria);
   margin: 8px auto 0;
+}
+
+.premium-img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.premium-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajuste fino do fundo da seção */
+.bg-light {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
 }
 
 #indicacoes {
