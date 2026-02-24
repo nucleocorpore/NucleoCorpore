@@ -1,0 +1,186 @@
+:root {
+  --navbar-height: 72px;
+  --cor-secundaria: rgba(248, 132, 99) !important;
+}
+
+body {
+  margin: 0;
+}
+
+.hero-pilates {
+  min-height: calc(100vh - var(--navbar-height));
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../images/hero.webp") center/cover no-repeat;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.btn-hero:hover {
+  background-color: var(--cor-secundaria) !important;
+  color: white !important;
+}
+
+.bg-custom {
+  background-color: var(--cor-secundaria) !important;
+}
+
+.titulo-destaque {
+  color: var(--cor-secundaria) !important;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-destaque::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  background-color: var(--cor-secundaria);
+  margin: 8px auto 0;
+}
+
+#indicacoes {
+  background-color: var(--cor-secundaria-90);
+  color: white;
+}
+
+.indicacao-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 320px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.indicacao-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+}
+
+.indicacao-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+.indicacao-card h5,
+.indicacao-card p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+.indicacao-card h5 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--cor-secundaria);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.indicacao-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #f0e6e2;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 767px) {
+  .indicacao-card {
+    min-height: 280px;
+  }
+}
+
+.custom-arrow {
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%);
+
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 60% 60%;
+  filter: invert(1);
+}
+
+.lista-premium {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-premium li {
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.lista-premium li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background-color: var(--cor-secundaria);
+  border-radius: 50%;
+}
+
+.card-contato {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-contato:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: var(--cor-secundaria-70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--cor-secundaria);
+}
+
+.contato-icon {
+  background-color: var(--cor-secundaria-70);
+}
+
+.contato-numero {
+  font-size: 1.1rem;
+  color: var(--cor-secundaria);
+  font-weight: 500;
+}
+
+.social-icon {
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--cor-secundaria);
+}
